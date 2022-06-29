@@ -39,7 +39,9 @@ get_header();
                                 <div class="meta text-muted mt-3">
                                     <div class="mb-1 post-created">
                                         <i class="bi bi-calendar-fill"></i> 
-                                        <?php the_time('F j, Y'); ?>
+                                        <a href="<?php echo get_year_link(date_format(date_create($featured_posts->post_date), 'Y')); ?>">
+                                            <?php the_time('F j, Y'); ?>
+                                        </a>
                                     </div>
                                     <div class="post-categories">
                                         <i class="bi bi-bookmark-fill"></i> 
@@ -98,7 +100,9 @@ get_header();
                             <div class="meta text-muted mt-3">
                                 <div class="mb-1 post-created">
                                     <i class="bi bi-calendar-fill"></i> 
-                                    <?php the_time('F j, Y'); ?>
+                                    <a href="<?php echo get_year_link(date_format(date_create($latest_stories->post_date), 'Y')); ?>">
+                                        <?php the_time('F j, Y'); ?>
+                                    </a>
                                 </div>
                                 <div class="post-categories">
                                     <i class="bi bi-bookmark-fill"></i> 

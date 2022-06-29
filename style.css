@@ -111,6 +111,8 @@ h4.widget-title {
     line-height: 1.8rem;
 }
 .widget-box a,
+.blog-post .meta a,
+.featured .meta a,
 .post-author .meta a,
 .post-categories a
  {
@@ -118,6 +120,8 @@ h4.widget-title {
     text-decoration: none;
 }
 .widget-box a:hover,
+.blog-post .meta a:hover,
+.featured .meta a:hover,
 .post-author .meta a:hover,
 .post-categories a:hover {
     color: #0d6efd;

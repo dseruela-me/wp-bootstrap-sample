@@ -50,7 +50,7 @@
                                     ?>
                                     <i class="bi bi-bookmark-fill"></i> <!-- Category -->
                                     <a href="<?php echo esc_url($category_link); ?>">
-                                        <?php echo get_the_category()[0]->name; ?>
+                                        <?php the_category(', '); ?>
                                     </a>
                                 </span>
                             </div>

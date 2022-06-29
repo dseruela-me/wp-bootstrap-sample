@@ -95,6 +95,54 @@
     </button>
   </div>
     <?php
+  } elseif( is_archive() ) {
+    ?>
+    <div class="container">
+      <div class="row justify-content-center align-items-center h-100 py-5 bg-light">
+          <div class="col-md-6">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb justify-content-center py-0 bg-transparent">
+                      <li class="breadcrumb-item"><a href="/">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        <?php 
+                          if( is_author() ) {
+                            echo "Author Archive";
+                          } elseif( is_day() ) {
+                            echo "Day Archive";
+                          } elseif( is_month() ) {
+                            echo "Month Archive";
+                          } elseif( is_year() ) {
+                            echo "Year Archive";
+                          } elseif( is_category() ) {
+                            echo "Category Archive";
+                          } elseif( is_tag() ) {
+                            echo "Tag Archive";
+                          } 
+                        ?>
+                      </li>
+                  </ol>
+              </nav>
+              <h1 class="text-center">
+                <?php 
+                  if( is_author() ) {
+                    echo ucwords(get_the_author());
+                  } elseif( is_day() ) {
+                    echo get_the_date('d');
+                  } elseif( is_month() ) {
+                    echo get_the_date('M');
+                  } elseif( is_year() ) {
+                    echo get_the_date('Y');
+                  } elseif( is_category() ) {
+                    echo single_cat_title();
+                  } elseif( is_tag() ) {
+                    echo ucwords(single_tag_title());
+                  }
+                ?>
+                </h1>
+          </div>
+      </div>
+    </div>
+    <?php
   } elseif( is_search() ) {
     ?>
     <div class="container">
