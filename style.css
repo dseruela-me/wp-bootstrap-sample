@@ -111,6 +111,7 @@ h4.widget-title {
     line-height: 1.8rem;
 }
 .widget-box a,
+.blog-single-wrap .post-meta a,
 .blog-post .meta a,
 .featured .meta a,
 .post-author .meta a,
@@ -120,6 +121,7 @@ h4.widget-title {
     text-decoration: none;
 }
 .widget-box a:hover,
+.blog-single-wrap .post-meta a:hover,
 .blog-post .meta a:hover,
 .featured .meta a:hover,
 .post-author .meta a:hover,

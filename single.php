@@ -40,7 +40,10 @@
                             <div class="post-created">
                                 <span class="icon">
                                     <i class="bi bi-calendar-fill"></i>
-                                </span> <?php the_time('F j, Y'); ?>
+                                </span> 
+                                <a href="<?php echo get_year_link(date_format(date_create(get_the_date()), 'Y')); ?>">
+                                    <?php the_time('F j, Y'); ?>
+                                </a>
                             </div>
                             <div class="post-categories">
                                 <span class="icon">

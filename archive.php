@@ -27,7 +27,9 @@
                     <div class="meta text-muted mt-3">
                         <div class="mb-1 post-created">
                             <i class="bi bi-calendar-fill"></i> 
-                            <?php the_time('F j, Y'); ?>
+                            <a href="<?php echo get_year_link(date_format(date_create(get_the_date()), 'Y')); ?>">
+                                <?php the_time('F j, Y'); ?>
+                            </a>
                         </div>
                         <?php 
                             if( has_category() ) {
