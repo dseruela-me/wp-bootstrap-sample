@@ -1,0 +1,177 @@
+/*
+ * Theme Name: WP-Bootstrap
+ * Author: Dan Laurice Seruela
+ * Author URI: https://danseruela.com
+ * Version: 1.0
+ */
+
+.admin-bar {
+    top: 32px;
+} 
+.spacer {
+    margin-top: 6rem;
+}
+
+.blog-post-permalink {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+.blog-pagination .btn,
+.btn.readmore {
+    border-radius: 2rem !important;
+    width: 10rem;
+}
+
+/* Carousel */
+#myCarousel {
+    margin-top: -10px !important;
+}
+.carousel-item {
+    height: 32rem !important;
+}
+.carousel-caption {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+/* Posts */
+.single-blog-spacer {
+    height: 1rem;
+}
+.post-meta {
+    display: inline-flex;
+    font-size: 14px;
+}
+.post-meta .post-created,
+.post-meta .post-categories,
+.post-meta .post-comment-count {
+    margin-right: 1rem;
+}
+.header {
+    border-radius: 8px;
+    box-shadow: 0 5px 10px #b6b4b4;
+}
+.blog-single-wrap .post-thumb img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.avatar {
+    border-radius: 50%;
+    box-shadow: 0 5px 5px #b6b4b4;
+}
+.meta-header {
+    height: 50px !important;
+}
+.post-author {
+    width: 96%;
+    position:relative;
+    top: -30px;
+    left: 20px;
+    display: inline-flex;
+}
+.post-author .meta {
+    position: relative;
+    top: 40px;
+    left: 14px;
+    font-size: 14px;
+}
+.post-author .post-sharer {
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.post-author .post-sharer i {
+    font-size: 24px;
+    color: #0d6efd;
+}
+.featured img {
+    width: 100%;
+}
+/* Sidebar Widget */
+.sidebar-widgets {
+    top: 7.8rem;
+}
+.divider {
+    width: 30px;
+    height: 3px;
+    background-color: #0d6efd;
+    margin: 0.8rem  0 1rem;
+}
+.widget-box,
+.articles-wrapper {
+    border-radius: 8px;
+}
+h4.widget-title {
+    color: #0d6efd;
+}
+.widget-box ul li {
+    line-height: 1.8rem;
+}
+.widget-box a,
+.post-author .meta a,
+.post-categories a
+ {
+    color: #666;
+    text-decoration: none;
+}
+.widget-box a:hover,
+.post-author .meta a:hover,
+.post-categories a:hover {
+    color: #0d6efd;
+    text-decoration: none;
+}
+.widget-box .blog-item {
+    display: flex;
+}
+.widget-box .blog-item .post-thumb {
+    width: 25%;
+}
+.widget-box .blog-item .post-thumb img {
+    width: 100%;
+}
+.widget-box .blog-item .meta {
+    font-size: 14px;
+}
+.widget-box .blog-item .meta a {
+    margin-right: 1rem;
+}
+/* Search Page */
+.search-page .blog-post .meta,
+.front-page .blog-post .meta {
+    display: flex;
+    font-size: 14px;
+}
+.search-page .blog-post .meta div,
+.front-page .blog-post .meta div {
+    margin-right: 1rem;
+}
+/* Footer */
+.blog-footer {
+    padding: 2.5rem 0;
+    color: #727272;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .admin-bar {
+        top: 46px;
+    }
+    .spacer{
+        margin-top: 7rem;
+    }
+    .widget-box .blog-item .post-thumb {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .widget-box .blog-item .post-thumb {
+        display: block;
+    }
+}
