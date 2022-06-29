@@ -143,11 +143,13 @@ h4.widget-title {
     margin-right: 1rem;
 }
 /* Search Page */
+.archive-page .blog-post .meta,
 .search-page .blog-post .meta,
 .front-page .blog-post .meta {
     display: flex;
     font-size: 14px;
 }
+.archive-page .blog-post .meta div,
 .search-page .blog-post .meta div,
 .front-page .blog-post .meta div {
     margin-right: 1rem;
