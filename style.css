@@ -17,11 +17,22 @@
     color: inherit;
 }
 
-/* Navigation */
-.blog-pagination .btn,
+/* Read more button */
 .btn.readmore {
     border-radius: 2rem !important;
     width: 10rem;
+}
+
+/* Pagination */
+.page-numbers.current .btn {
+    background: #0d6efd!important;
+    color: #fff !important;
+}
+.page-numbers span {
+    color: #0d6efd!important;
+}
+.page-numbers span:hover {
+    color: #fff !important;
 }
 
 /* Carousel */

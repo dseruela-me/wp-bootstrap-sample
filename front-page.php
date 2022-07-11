@@ -7,7 +7,6 @@ get_header();
         <?php
         $args = array(
             'post_type'             =>  'post',
-            'paged'                 =>  get_query_var( 'paged' ),
             'category_name'         =>  'featured',
             'posts_per_page'        =>  '2',
         );
@@ -69,17 +68,21 @@ get_header();
             <h4 class="widget-title">Latest Stories</h4>
             <div class="divider"></div>
             <?php 
-            $args = array(
+            // get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1
+            // use 'page' for front-page and 'paged' for the rest of the page.
+            $latest_stories_args = array(
                 'post_type'              => 'post',
-                'paged'                  => get_query_var( 'paged' ),
-                'posts_per_page'         => '10',
+                'paged'                  => get_query_var( 'page', 1 ),
+                'posts_per_page'         => 5,
             );
 
-            $latest_stories = new WP_Query( $args );
+            $latest_stories = new WP_Query( $latest_stories_args );
             
             ?>
-            <?php if ( $latest_stories->have_posts() ) : ?>
-                <?php while ( $latest_stories->have_posts() ) : $latest_stories->the_post(); ?>
+            <?php if ( $latest_stories->have_posts() ) { ?>
+                <?php while ( $latest_stories->have_posts() ) { 
+                    $latest_stories->the_post(); 
+                ?>
                     <article class="blog-post row overflow-hidden flex-md-row mb-4 position-relative">
                         <div class="col-auto d-none d-lg-block">
                             <a class="blog-post-permalink" href="<?php the_permalink(); ?>">
@@ -114,16 +117,16 @@ get_header();
                             </div>
                         </div>
                     </article>
-                <?php endwhile; ?>
-            <nav class="blog-pagination">
-                <?php next_posts_link( '<button class="btn btn-outline-primary">Older posts</button>', $latest_stories->max_num_pages); ?>
-                <?php previous_posts_link( '<button class="btn btn-outline-primary">Newer posts</button>', $latest_stories->max_num_pages); ?>
-            </nav>
-            
-            <?php else : ?>
+                <?php } // end of while-statement ?>
+                <nav class="blog-pagination my-5 text-center">
+                    <?php 
+                        echo home_pagination( $latest_stories );
+                    ?>
+                </nav>
+            <?php } else { ?>
             <?php _e('Sorry, no posts matched your criteria.'); ?>
-            <?php endif; 
-            wp_reset_postdata();
+            <?php } // end of if-statement 
+                wp_reset_postdata();
             ?>
         </div>
         <div class="col-md-4 px-4 sidebar">
