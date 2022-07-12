@@ -65,15 +65,16 @@ get_header();
 
     <div class="row mb-2 mt-4">
         <div class="articles-wrapper col-md-8 p-4 shadow">
-            <h4 class="widget-title">Latest Stories</h4>
+            <h4 class="widget-title">Latest WordPress News</h4>
             <div class="divider"></div>
             <?php 
             // get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1
             // use 'page' for front-page and 'paged' for the rest of the page.
             $latest_stories_args = array(
-                'post_type'              => 'post',
-                'paged'                  => get_query_var( 'page', 1 ),
-                'posts_per_page'         => 5,
+                'post_type'             => 'post',
+                'paged'                 => get_query_var( 'page', 1 ),
+                'category_name'         => 'Wordpress',
+                'posts_per_page'        => 5,
             );
 
             $latest_stories = new WP_Query( $latest_stories_args );
@@ -153,7 +154,7 @@ get_header();
                     <h4 class="widget-title">Recent Posts</h4>
                     <div class="divider"></div>
                     <?php 
-                        $posts = get_posts();
+                        $posts = get_posts( array('numberposts' =>  4) );
                         foreach ($posts as $post) {
                     ?>
                     <div class="blog-item mb-3">

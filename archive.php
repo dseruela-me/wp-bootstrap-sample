@@ -49,7 +49,17 @@
             </article>
             <?php
         }
-    ?>
+        ?>
+        <nav class="blog-pagination my-5 text-center">
+            <?php
+                echo paginate_links([
+                    'prev_text' => '<button class="btn btn-sm btn-outline-primary">Previous</button>',
+                    'next_text' => '<button class="btn btn-sm btn-outline-primary">Next</button>',
+                    'before_page_number'    =>  '<span class="btn btn-sm btn-outline-primary mr-2">',
+                    'after_page_number'     =>  '</span>',
+                ]);
+            ?>
+        </nav>
     </div>
 </main>
 <?php
