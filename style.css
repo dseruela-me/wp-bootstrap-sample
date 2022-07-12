@@ -159,25 +159,36 @@ h4.widget-title {
     margin-right: 1rem;
 }
 /* Search Page */
+.blog-page .blog-post .meta,
 .archive-page .blog-post .meta,
 .search-page .blog-post .meta,
 .front-page .blog-post .meta {
     display: flex;
     font-size: 14px;
 }
+.blog-page .blog-post .meta div,
 .archive-page .blog-post .meta div,
 .search-page .blog-post .meta div,
 .front-page .blog-post .meta div {
     margin-right: 1rem;
 }
 /* Footer */
-.blog-footer {
-    padding: 2.5rem 0;
-    color: #727272;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
+footer #copyright {
+    font-size: 0.8rem;
 }
+footer a.nav-link {
+    font-size: 0.9rem;
+}
+footer a.nav-link:hover {
+    color: rgba(255,255,255,.75) !important;
+}
+.link-light {
+    color: #fff !important;
+}
+.border-top {
+    border-top: 1px solid #4d4e4e!important;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {

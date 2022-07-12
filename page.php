@@ -1,7 +1,7 @@
 <?php 
     get_header();
 ?>
-<div class="mt-4 mb-4">
+<div class="container my-5">
     <?php
         while (have_posts()) {
             the_post();
