@@ -12,13 +12,16 @@
   <body>
   <!-- Navigation Menu -->
   <?php
-  if( is_user_logged_in() ) {
-    $add_space_admin_bar = 'admin-bar';
-  }
+    if( is_user_logged_in() ) {
+      $add_space_admin_bar = 'admin-bar';
+    }
+    if( is_user_logged_in() && is_customize_preview() ) {
+      $add_space_admin_bar = '';
+    }
   ?>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark py-4 <?=$add_space_admin_bar; ?>">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Fixed navbar</a>
+      <?php echo wpbootstrap_get_custom_logo(); ?>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
