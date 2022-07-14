@@ -50,7 +50,9 @@ get_header();
                                 <div class="content">
                                     <p class="card-text my-3"><?php the_excerpt(); ?></p>
                                     <p class="text-center mt-4 mb-2">
-                                        <a class="btn btn-outline-primary float-none readmore" href="<?php the_permalink(); ?>">Read more</a>
+                                        <a class="btn btn-outline-primary float-none readmore" href="<?php the_permalink(); ?>">
+                                            <?php echo get_option( 'wpbootstrap_readmore_text', __( 'Read More', 'wpbootstrap' ) ); ?>
+                                        </a>
                                     </p>
                                 </div>
                             </div>
